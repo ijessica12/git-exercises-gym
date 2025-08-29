@@ -305,7 +305,7 @@ CMU@DESKTOP-DGCLDK7 MINGW64 ~/desktop/git/exercise (main)
 $
 `````
 
-### Exercise 3
+### Exercise 2
 `````bash
 CMU@DESKTOP-DGCLDK7 MINGW64 ~/desktop/git/exercise (main)
 $ git checkout -b ft/service-redesign
