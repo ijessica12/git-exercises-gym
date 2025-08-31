@@ -702,3 +702,34 @@ To github.com:ijessica12/git-exercises-gym.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 `````
+<<<<<<< HEAD
+=======
+## Bundle 4
+### Exercise 1
+````bash 
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git remote add git-copy git@github.com:ijessica12/git-copies.git
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ code home.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git add home.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git commit -m "add the greeting to the home page"
+[main 913d5cc] add the greeting to the home page
+ 1 file changed, 1 insertion(+)
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git push git-copy main
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (35/35), 7.36 KiB | 685.00 KiB/s, done.
+Total 35 (delta 11), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (11/11), done.
+To github.com:ijessica12/git-copies.git
+ * [new branch]      main -> main
+>>>>>>> 67a86a4 (update Readme with local changes)
