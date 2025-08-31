@@ -624,7 +624,7 @@ To github.com:ijessica12/git-exercises-gym.git
 branch 'ft/team-page' set up to track 'origin/ft/team-page'.
 `````
 
-### Exercise 2
+### Exercise 3
 `````bash
 CMU@DESKTOP-DGCLDK7 MINGW64 ~/desktop/git/exercise (ft/team-page)
 $ git checkout ft/faq-page
