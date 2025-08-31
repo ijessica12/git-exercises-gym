@@ -624,7 +624,7 @@ To github.com:ijessica12/git-exercises-gym.git
 branch 'ft/team-page' set up to track 'origin/ft/team-page'.
 `````
 
-### Exercise 3
+### Exercise 2
 `````bash
 CMU@DESKTOP-DGCLDK7 MINGW64 ~/desktop/git/exercise (ft/team-page)
 $ git checkout ft/faq-page
@@ -702,8 +702,6 @@ To github.com:ijessica12/git-exercises-gym.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 `````
-<<<<<<< HEAD
-=======
 ## Bundle 4
 ### Exercise 1
 ````bash 
@@ -732,4 +730,182 @@ Total 35 (delta 11), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (11/11), done.
 To github.com:ijessica12/git-copies.git
  * [new branch]      main -> main
->>>>>>> 67a86a4 (update Readme with local changes)
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git push origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.23 KiB | 1.23 MiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
+To github.com:ijessica12/git-exercises-gym.git
+   4db89a4..abf27bd  main -> main
+
+`````
+
+### Exercise 2
+`````bash
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ echo "installment of payment">bill.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ git add bill.html
+warning: in the working copy of 'bill.html', LF will be replaced by CRLF the next
+time Git touches it
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ git commit -m "add bill page "
+[ft/footer a1037fa] add bill page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bill.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/ijessica12/git-exercises-gym/pull/new/ft/footer
+remote:
+To github.com:ijessica12/git-exercises-gym.git
+ * [new branch]      ft/footer -> ft/footer
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ echo "we have free standard and experience ">>bill.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ git add bill.html
+warning: in the working copy of 'bill.html', LF will be replaced by CRLF the next
+time Git touches it
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ git commit -m "update the bill page"
+[ft/footer b237e5a] update the bill page
+ 1 file changed, 1 insertion(+)
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:ijessica12/git-exercises-gym.git
+   a1037fa..b237e5a  ft/footer -> ft/footer
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/footer)
+$ git checkout main
+M       Readme.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git checkout -b ft/Squashing
+Switched to a new branch 'ft/Squashing'
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/Squashing)
+$ git merge --squash ft/footer
+Updating abf27bd..b237e5a
+Fast-forward
+Squash commit -- not updating HEAD
+ bill.html | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 bill.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/Squashing)
+$ git commit -m "footer channges squashing "
+[ft/Squashing 7b03614] footer channges squashing
+ 1 file changed, 2 insertions(+)
+ create mode 100644 bill.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (ft/Squashing)
+$ git push origin ft/Squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/Squashing' on GitHub by visiting:
+remote:      https://github.com/ijessica12/git-exercises-gym/pull/new/ft/Squashin
+remote:
+To github.com:ijessica12/git-exercises-gym.git
+ * [new branch]      ft/Squashing -> ft/Squashing
+`````
+
+## Bundle 5
+### Exercise 1
+
+`````bash
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git add index.html home.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git commit -m "rename home to index"
+[main a0d2713] rename home to index
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename home.html => index.html (100%)
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 238 bytes | 119.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:ijessica12/git-exercises-gym.git
+   abf27bd..a0d2713  main -> main
+`````
+
+### Exercise 2
+`````bash
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git
+$ git clone git@github.com:ijessica12/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 699.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git
+$ cd git-cafe-exercise
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (main)
+$ git add index.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (main)
+$ git commit -m "Change 'Welcome to our Restaurant' to 'Welcome to our restaurant'"
+[main 1ffb261] Change 'Welcome to our Restaurant' to 'Welcome to our restaurant'
+ 1 file changed, 283 insertions(+), 226 deletions(-)
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.39 KiB | 284.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:ijessica12/git-cafe-exercise.git
+   d1d3f9c..1ffb261  main -> main
+`````
