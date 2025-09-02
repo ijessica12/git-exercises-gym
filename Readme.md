@@ -704,7 +704,7 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 `````
 ## Bundle 4
 ### Exercise 1
-````bash 
+`````bash 
 CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/exercise (main)
 $ git remote add git-copy git@github.com:ijessica12/git-copies.git
 
@@ -875,6 +875,7 @@ To github.com:ijessica12/git-exercises-gym.git
 `````
 
 ### Exercise 2
+
 `````bash
 CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git
 $ git clone git@github.com:ijessica12/git-cafe-exercise.git
@@ -908,4 +909,135 @@ Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:ijessica12/git-cafe-exercise.git
    d1d3f9c..1ffb261  main -> main
+`````
+
+## Bundle 6
+
+### Exercise 1
+
+`````bash
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (main)
+$ git checkout -b ft/menu-page
+Switched to a new branch 'ft/menu-page'
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/menu-page)
+$ echo "sample menu drinks,food ">menu.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/menu-page)
+$ git add menu.html
+warning: in the working copy of 'menu.html', LF will be replaced by CRLF the nex
+t time Git touches it
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/menu-page)
+$ git commit -m " add menu page"
+[ft/menu-page 06294e5]  add menu page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 menu.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/menu-page)
+$ git push origin ft/menu-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 99.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu-page' on GitHub by visiting:
+remote:      https://github.com/ijessica12/git-cafe-exercise/pull/new/ft/menu-pa
+ge
+remote:
+To github.com:ijessica12/git-cafe-exercise.git
+ * [new branch]      ft/menu-page -> ft/menu-page
+
+`````
+### Exercise 2
+
+`````bash
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/menu-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (main)
+$ git pull origin main
+From github.com:ijessica12/git-cafe-exercise
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (main)
+$ git chackout -b ft/bugfix
+git: 'chackout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (main)
+$ git checkout -b ft/bugfix
+Switched to a new branch 'ft/bugfix'
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/bugfix)
+$ code index-4.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/bugfix)
+$ git add index-4.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/bugfix)
+$ git commit -m "fix title of index-4 page to contact"
+[ft/bugfix 2f8b9f4] fix title of index-4 page to contact
+ 1 file changed, 172 insertions(+), 157 deletions(-)
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/bugfix)
+$ git push origin ft/bugfix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.19 KiB | 1.19 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/bugfix' on GitHub by visiting:
+remote:      https://github.com/ijessica12/git-cafe-exercise/pull/new/ft/bugfix
+remote:
+To github.com:ijessica12/git-cafe-exercise.git
+ * [new branch]      ft/bugfix -> ft/bugfix
+
+`````
+### Exercuse 3
+`````bash
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/bugfix)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (main)
+$ git checkout -b ft/hotfix
+Switched to a new branch 'ft/hotfix'
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/hotfix)
+$ git add index-4.html
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/hotfix)
+$ git commit -m "update contact phone number"
+[ft/hotfix 5ff2531] update contact phone number
+ 1 file changed, 171 insertions(+), 156 deletions(-)
+
+CMU@DESKTOP-DGCLDK7 MINGW64 ~/Desktop/git/git-cafe-exercise (ft/hotfix)
+$ git push -u origin ft/hotfix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.19 KiB | 611.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/hotfix' on GitHub by visiting:
+remote:      https://github.com/ijessica12/git-cafe-exercise/pull/new/ft/hotfix
+remote:
+To github.com:ijessica12/git-cafe-exercise.git
+ * [new branch]      ft/hotfix -> ft/hotfix
+branch 'ft/hotfix' set up to track 'origin/ft/hotfix'.
 `````
